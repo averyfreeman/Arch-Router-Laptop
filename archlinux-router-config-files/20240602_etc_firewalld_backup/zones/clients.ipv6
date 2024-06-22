@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Clients</short>
+  <description>Client network</description>
+  <service name="cockpit"/>
+  <service name="dns"/>
+  <service name="dns-over-tls"/>
+  <service name="dhcp"/>
+  <service name="dhcpv6"/>
+  <service name="dhcpv6-client"/>
+  <service name="http"/>
+  <service name="https"/>
+  <service name="mdns"/>
+  <service name="ssh"/>
+  <service name="zerotier"/>
+  <port port="10000" protocol="tcp"/>
+  <port port="5201" protocol="tcp"/>
+  <port port="5201" protocol="udp"/>
+  <icmp-block name="echo-reply"/>
+  <icmp-block name="echo-request"/>
+  <icmp-block name="time-exceeded"/>
+  <icmp-block name="port-unreachable"/>
+  <icmp-block name="fragmentation-needed"/>
+  <icmp-block name="packet-too-big"/>
+  <icmp-block name="neighbour-solicitation"/>
+  <icmp-block name="neighbour-advertisement"/>
+  <icmp-block name="router-advertisement"/>
+  <icmp-block name="router-solicitation"/>
+  <rule family="ipv6">
+    <masquerade/>
+  </rule>
+  <interface name="br0"/>
+  <icmp-block-inversion/>
+  <forward/>
+</zone>

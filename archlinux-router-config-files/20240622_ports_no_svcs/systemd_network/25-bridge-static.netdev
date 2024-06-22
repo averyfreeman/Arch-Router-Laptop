@@ -1,0 +1,7 @@
+[NetDev]
+Name=br0
+Kind=bridge
+MACAddress=66:92:c1:9e:2a:0a
+
+[Bridge]
+STP=yes

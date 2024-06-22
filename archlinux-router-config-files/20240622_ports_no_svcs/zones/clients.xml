@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone target="ACCEPT">
+  <short>Clients</short>
+  <description>Client network</description>
+  <port port="22" protocol="tcp"/>
+  <port port="53" protocol="udp"/>
+  <port port="67" protocol="udp"/>
+  <port port="80" protocol="tcp"/>
+  <port port="443" protocol="tcp"/>
+  <port port="5201" protocol="tcp"/>
+  <port port="5201" protocol="udp"/>
+  <port port="9200" protocol="tcp"/>
+  <port port="9300" protocol="tcp"/>
+  <port port="9443" protocol="tcp"/>
+  <port port="9090" protocol="tcp"/>
+  <port port="10000" protocol="tcp"/>
+  <port port="54321" protocol="udp"/>
+  <icmp-block name="echo-reply"/>
+  <icmp-block name="echo-request"/>
+  <masquerade/>
+  <interface name="br0"/>
+  <icmp-block-inversion/>
+  <forward/>
+</zone>

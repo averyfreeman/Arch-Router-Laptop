@@ -1,0 +1,16 @@
+internet (active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: yes
+  interfaces: enp0s25 enp0s25.201
+  sources: 
+  services: 
+  ports: 22/tcp 53/udp 67/udp 80/tcp 443/tcp 9090/tcp 54321/udp
+  protocols: 
+  forward: yes
+  masquerade: yes
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: echo-reply echo-request
+  rich rules: 

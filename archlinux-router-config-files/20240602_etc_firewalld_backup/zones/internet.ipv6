@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+	<short>Internet</short>
+	<description>A series of tubes</description>
+	<service name="dns"/>
+	<service name="dns-over-tls"/>
+	<service name="dhcp"/>
+	<service name="dhcpv6"/>
+	<service name="dhcpv6-client"/>
+	<service name="http"/>
+	<service name="https"/>
+	<port port="54321" protocol="tcp"/>
+	<port port="54321" protocol="udp"/>
+  <icmp-block name="echo-reply"/>
+  <icmp-block name="echo-request"/>
+  <icmp-block name="time-exceeded"/>
+  <icmp-block name="port-unreachable"/>
+  <icmp-block name="fragmentation-needed"/>
+  <icmp-block name="packet-too-big"/>
+  <icmp-block name="neighbour-solicitation"/>
+  <icmp-block name="neighbour-advertisement"/>
+  <icmp-block name="router-advertisement"/>
+  <icmp-block name="router-solicitation"/>
+  <rule family="ipv6">
+    <masquerade/>
+  </rule>
+  <interface name="6rd"/>
+  <interface name="enp0s25"/>
+  <interface name="enp0s25.201"/>
+  <interface name="sit0"/>
+  <icmp-block-inversion/>
+</zone>

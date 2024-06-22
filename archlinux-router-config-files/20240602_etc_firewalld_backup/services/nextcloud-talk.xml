@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>nextcloud-talk</short>
+  <description>Nextcloud Talk Container</description>
+  <port port="3478" protocol="tcp"/>
+  <port port="3478" protocol="udp"/>
+  <protocol value="tcp"/>
+  <protocol value="udp"/>
+  <destination ipv4="0.0.0.0/0" ipv6="::/0"/>
+</service>

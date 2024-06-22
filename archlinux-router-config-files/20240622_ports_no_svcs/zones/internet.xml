@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Internet</short>
+  <description>A series of tubes</description>
+  <port port="22" protocol="tcp"/>
+  <port port="53" protocol="udp"/>
+  <port port="67" protocol="udp"/>
+  <port port="80" protocol="tcp"/>
+  <port port="443" protocol="tcp"/>
+  <port port="9090" protocol="tcp"/>
+  <port port="54321" protocol="udp"/>
+  <icmp-block name="echo-reply"/>
+  <icmp-block name="echo-request"/>
+  <masquerade/>
+  <interface name="enp0s25"/>
+  <interface name="enp0s25.201"/>
+  <icmp-block-inversion/>
+  <forward/>
+</zone>
