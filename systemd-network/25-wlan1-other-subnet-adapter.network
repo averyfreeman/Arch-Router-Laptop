@@ -1,0 +1,6 @@
+[Match]
+Name=wlan1
+
+[Network]
+Description=wifi-adapter
+DHCP=yes
