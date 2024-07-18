@@ -23,10 +23,10 @@ make ctf
 make nsdeps
 make modules_prepare
 make bzImage
+make tarzst-pkg
 make modules_install
 make headers_install
 
-sudo kernel-install add $RELEASE /usr/lib/modules/$RELEASE/vmlinuz
 sudo cp arch/x86/boot/bzImage /usr/lib/modules/$RELEASE/vmlinuz
 
 sudo kernel-install add $RELEASE /usr/lib/modules/$RELEASE/vmlinuz
