@@ -1,6 +1,8 @@
 # Arch Router Laptop Essentials
 ---
 
+If you're curious about how this rather unique project came about, I've written at length about it here:  https://develmonk.com/2024/07/18/running-an-arch-linux-router-for-about-a-year/
+
 This is a collection of the most important config files to set up a barebones router on Arch Linux.  I add the `laptop` part, because I set it up on an old Thinkpad T520 I'd repurposed as an Active Directory domain server several years prior. 
 
 Actually, the configs are essentially distro-agnostic, but I like Arch, so I went with it.  I put it together because throughput was garbage using pfSense no matter what hardware I used for it.  Arch pushes 940Mbps (1Gbps line speed) without even breaking a sweat.  NICs are a Broadcom NetXtreme BCM57762 PCMCIA card and the built-in Intel 82574L
