@@ -8,7 +8,7 @@ This is a collection of the most important config files to set up a barebones ro
 Actually, the configs are essentially distro-agnostic, but I like Arch, so I went with it.  I put it together because throughput was garbage using pfSense no matter what hardware I used for it.  Arch pushes 940Mbps (1Gbps line speed) without even breaking a sweat.  NICs are a Broadcom NetXtreme BCM57762 PCMCIA card and the built-in Intel 82574L
 
 - Thin-lvm snapshot taken at boot. Limit 5 + 1 (current). Boots `ro`
-- initrd set is `kernel-install` + `systemd-networkd` + `mkinitcpio` (KISS)
+- initrd set is `kernel-install` + `sd-vconsole` + `mkinitcpio` (KISS)
 - Uses `systemd-networkd` for routing.  Includes linux bridge, `br0`, and `VLAN 201` tag for the phone/fiber WAN our provider Centurylink here in Seattle uses (not `ppp`). 
 - `firewalld` + `networkd` are leveraged for basic filtering and `NAT` (`masquerade`).
 - `hostapd` for `Intel AX201` wireless access point. 
