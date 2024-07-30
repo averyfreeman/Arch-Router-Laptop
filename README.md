@@ -22,8 +22,7 @@ Update 20240730:
 
 Known not working:
 ---
-- `dnssec` option causes `dnsmasq.service` to fail. Not sure exactly why, but guessing Arch package built without `dnssec` support.
-- Possible workaround:  Use `systemd-resolved` for forwarders
+- `dnssec` option causes `dnsmasq.service` to fail. Not sure exactly why, but guessing Arch package built without `dnssec` support.  Workaround:  Set `systemd-resolved` as forwarder.
 
 Was really easy to set up and has been surprisingly more reliable than I ever imagined, working without issue since June of 2023.  Not bad for a rolling distro.
 
