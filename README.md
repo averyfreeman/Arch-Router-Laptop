@@ -13,14 +13,14 @@ Actually, the configs are essentially distro-agnostic, but I like Arch, so I wen
 - `firewalld` + `networkd` are leveraged for basic filtering and `NAT` (`masquerade`).
 - `hostapd` for `Intel AX201` wireless access point. 
 
-Update 20240730: 
+### Update 20240730: 
 ---
 - Forgot to mention `dnsmasq` - I've added my `dnsmasq.conf` for an example
   - dhcp reservations to assign clients to certain addresses via MAC
   - `/etc/hosts` is respository that defines all local hostnames    
   - `expand-hosts` option appends domain name to local dns resolution
 
-Known not working:
+### Known not working:
 ---
 - `dnssec` option causes `dnsmasq.service` to fail. Not sure exactly why, but guessing Arch package built without `dnssec` support.  Workaround:  Set `systemd-resolved` as forwarder.
 
@@ -64,6 +64,8 @@ TIMELINE_MIN_AGE         │ 3600
 
 ### The Future:
 --- 
+
+Update - 20240730: I've gotten this setup working on Ubuntu with some minor changes in the way the network is configured through `netplan` and some inconsistencies in the way `firewalld` is configured compared to Arch (spoiler: I found Arch to be _much_ more user-friendly).  However, running a system where `maas` is supported as a router means we can use `maas` instead of `dnsmasq` to hand out DHCP leases, combined with all its fun, extra features for device discovery, initialization, and definition, not to mention all the `kvm` and `lxd` integration, right on our LAN.  **Stay tuned**, I'll do a write-up within the next few months.  
 
 - Short-range plans include either forking the work they've been doing at OpenSUSE on rollback with `systemd-boot`, or forking `grub-btrfs`, as a solution like either of those would certainly be helpful for disaster recovery.
 
