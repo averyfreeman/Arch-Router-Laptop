@@ -1,0 +1,10 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details
+127.0.0.1       localhost
+127.0.0.1       dnsmasq
+192.168.1.1     router
+192.168.1.22    wantonwildebeest  wanton
+# 192.168.1.30  randyrhino
+# 192.168.1.31  cockpit
+# 192.168.1.40  purplehippo
+192.168.1.240   proxmoxve         proxmox

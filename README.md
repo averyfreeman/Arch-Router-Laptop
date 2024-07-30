@@ -13,6 +13,18 @@ Actually, the configs are essentially distro-agnostic, but I like Arch, so I wen
 - `firewalld` + `networkd` are leveraged for basic filtering and `NAT` (`masquerade`).
 - `hostapd` for `Intel AX201` wireless access point. 
 
+Update 20240730: 
+---
+- Forgot to mention `dnsmasq` - I've added my `dnsmasq.conf` for an example
+  - dhcp reservations to assign clients to certain addresses via MAC
+  - `/etc/hosts` is respository that defines all local hostnames    
+  - `expand-hosts` option appends domain name to local dns resolution
+
+Known not working:
+---
+- `dnssec` option causes `dnsmasq.service` to fail. Not sure exactly why, but guessing Arch package built without `dnssec` support.
+- Possible workaround:  Use `systemd-resolved` for forwarders
+
 Was really easy to set up and has been surprisingly more reliable than I ever imagined, working without issue since June of 2023.  Not bad for a rolling distro.
 
 ### Snapper settings:
